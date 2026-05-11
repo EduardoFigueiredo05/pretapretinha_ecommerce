@@ -22,6 +22,7 @@
                 <button class="macro-btn active" data-macro="todos">Todos os Universos</button>
                 <button class="macro-btn" data-macro="Étnico-Racial">Étnico-Racial</button>
                 <button class="macro-btn" data-macro="Inclusão & Deficiência">Inclusão & Deficiência</button>
+                <button class="macro-btn" data-macro="Folclore">Folclore</button>
             </div>
 
             <div class="collection-select-wrapper">
@@ -41,7 +42,7 @@
                     <a href="/produto/{{ $product->slug }}">
                         @php
                             $mainImage = $product->images->where('is_main', true)->first();
-                            $imagePath = $mainImage ? $mainImage->image_path : 'https://placehold.co/400x400/F3F3F3/31343C?text=Sem+Foto';
+                            $imagePath = $mainImage ? $mainImage->image_path : '';
                         @endphp
                         <img src="{{ $imagePath }}" alt="{{ $product->title }}" class="product-img">
                     </a>

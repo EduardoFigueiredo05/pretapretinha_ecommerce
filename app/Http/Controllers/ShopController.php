@@ -10,15 +10,18 @@ class ShopController extends Controller
 {
     public function index()
     {
-        // Busca todos os produtos ativos, trazendo junto as categorias e as imagens
-        $products = Product::with(['category', 'images'])->where('is_active', true)->get();
-        
-        // Busca as categorias para montarmos o dropdown de filtros na tela
+        // 1. Busca os produtos ativos e já traz a categoria e a imagem principal
+        $products = Product::with(['category', 'images' => function($query) {
+            $query->where('is_main', true);
+        }])->where('is_active', true)->get();
+
+        // 2. Busca as categorias para montarmos o dropdown de filtros na tela
         $categories = Category::all();
 
-        // Envia esses dados para a View chamada 'loja'
+        // 3. Envia as DUAS variáveis ($products e $categories) para a View
         return view('loja', compact('products', 'categories'));
     }
+
     public function show($slug)
     {
         // Busca o produto pelo slug (URL) junto com a categoria e as imagens

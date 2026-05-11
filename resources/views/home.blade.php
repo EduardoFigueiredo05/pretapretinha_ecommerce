@@ -60,22 +60,22 @@
             <h2 class="section-title">Preta na Mídia</h2>
             <div class="media-scroller">
                 <div class="media-card">
-                    <span class="media-tag">TV Globo</span>
-                    <h4>Entrevista no Encontro</h4>
+                    <span class="media-tag">Record TV</span>
+                    <h4>Entrevista com Mion</h4>
                     <p>Falando sobre brinquedos inclusivos e impacto social.</p>
-                    <a href="#" style="text-decoration: underline;">Confira!</a>
+                    <a href="https://youtu.be/Zkb8oxf17zw" style="text-decoration: underline;">Confira!</a>
                 </div>
                 <div class="media-card">
                     <span class="media-tag">Revista Raça</span>
                     <h4>Capa da Edição 2024</h4>
                     <p>Empreendedorismo negro feminino em destaque.</p>
-                    <a href="#" style="text-decoration: underline;">Confira!</a>
+                    <a href="{{url('/midia#areaRevista')}}" style="text-decoration: underline;">Confira!</a>
                 </div>
                 <div class="media-card">
-                    <span class="media-tag">Folha de S.Paulo</span>
-                    <h4>Caderno Empreendedora</h4>
-                    <p>Como o instituto inovou no mercado de brinquedos.</p>
-                     <a href="#" style="text-decoration: underline;">Confira!</a>
+                    <span class="media-tag">Corrida com a Tocha Olímpica</span>
+                    <h4>Preta Pretinha na olímpiadas de 2016</h4>
+                    <p>Levando a diversidade para os esportes!</p>
+                     <a href="{{ url('/midia#tochaOlimpica') }}" style="text-decoration: underline;">Confira!</a>
                 </div>
                 <div class="media-card">
                     <span class="media-tag">Portal G1</span>

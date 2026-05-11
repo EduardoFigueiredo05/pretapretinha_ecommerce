@@ -8,7 +8,7 @@ class Product extends Model
 {
     protected $fillable = [
         'category_id', 'title', 'slug', 'price', 
-        'discount_price', 'description', 'attributes', 'stock', 'is_active'
+        'discount_price', 'description', 'attributes', 'stock', 'is_active','weight','length','width','height'
     ];
 
     // Relação: Um Produto pertence a uma Categoria

@@ -61,7 +61,7 @@
             </div>
 
             <!-- Tocha Olímpica -->
-            <div class="zig-zag-row reverse" style="margin-bottom: 0;">
+            <div class="zig-zag-row reverse" id="tochaOlimpica" style="margin-bottom: 0;">
                 <div class="zig-text">
                     <span class="tag-highlight" style="background: var(--color-black); color: var(--color-yellow); margin-bottom: 15px;">Esporte & Inclusão</span>
                     <h3 style="font-size: 2.5rem;">A Tocha Olímpica</h3>
@@ -121,25 +121,26 @@
     <!-- NA IMPRENSA (REVISTAS) COM SWIPER 3D -->
     <section class="section bg-yellow-pale" style="overflow: hidden;">
         <div class="container">
-            <h2 class="section-title center">Preta na Mídia</h2>
+            <h2 class="section-title center" id="areaRevista">Preta na Mídia</h2>
             <p class="center" style="max-width: 600px; margin: 0 auto 40px; color: #666;">Deslize para ver nossas publicações. Clique na capa para expandir e ler a matéria completa.</p>
             
             <div class="swiper magazine-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide magazine-card" onclick="openGalleryModal(this)">
-                        <img src="{{ asset('imgs/capa-claudia.jpg') }}" alt="Revista Claudia">
+                        <img src="{{ asset('imgs/capa-claudia01.png') }}" alt="Revista Claudia">
                         <div class="magazine-info">
                             <h4>Revista Claudia</h4>
                             <p>Bonequinhas Negras e Alto Faturamento</p>
                         </div>
                         <div class="hidden-description">
                             <h3>Revista Claudia (2004)</h3>
+                            <img src="{{ asset('imgs/conteudo-claudia.jpg') }}" alt="Revista Claudia">
                             <p>Destaque para o empreendedorismo e a história de sucesso de Joyce Venâncio. Transformando o hobby de infância em um negócio de alto impacto.</p>
                         </div>
                     </div>
 
                     <div class="swiper-slide magazine-card" onclick="openGalleryModal(this)">
-                        <img src="{{ asset('imgs/capa-raca.jpg') }}" alt="Revista Raça">
+                        <img src="{{ asset('imgs/capa-raca-parlamentoNegro.png') }}" alt="Revista Raça">
                         <div class="magazine-info">
                             <h4>Revista Raça Brasil</h4>
                             <p>Negras Bonecas</p>

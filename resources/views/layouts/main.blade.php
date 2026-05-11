@@ -40,10 +40,21 @@
                     
                     <!-- Carrinho movido para DENTRO da lista para respeitar o space-between do CSS -->
                     <li class="cart-icon-wrapper">
-                        <a href="/carrinho" aria-label="Carrinho de Compras">
-                            <i class="bi bi-bag-fill"></i>
-                            <span class="cart-badge">0</span>
-                        </a>
+                       @php 
+    // Conta quantos itens existem na sessão do carrinho
+    $cartCount = count((array) session('cart')); 
+@endphp
+
+<a href="{{ route('carrinho.index') }}" style="position: relative; text-decoration: none; color: #111; font-size: 1.2rem;">
+    <i class="bi bi-bag"></i>
+    
+    <!-- Só mostra a bolinha vermelha se tiver 1 ou mais itens -->
+    @if($cartCount > 0)
+        <span style="position: absolute; top: -8px; right: -12px; background: #dc2626; color: white; border-radius: 50%; padding: 2px 6px; font-size: 0.7rem; font-weight: bold; line-height: 1;">
+            {{ $cartCount }}
+        </span>
+    @endif
+</a>
                     </li>
                 </ul>
             </nav>
@@ -83,7 +94,7 @@
         <div class="sub-footer">
             <div class="container sub-footer-content">
                 <p>&copy; 2026 Instituto Preta Pretinha. Todos os direitos reservados.</p>
-                <p class="dev-tag">Desenvolvido por <a href="#"><span class="ef-highlight"> Consultorias EF</span></a></p>
+                <p class="dev-tag">Desenvolvido por <a href="https://portifolioeduardofigueiredo.netlify.app/"><span class="ef-highlight"> Consultorias EF</span></a></p>
             </div>
         </div>
     </footer>
